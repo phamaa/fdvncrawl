@@ -1,6 +1,6 @@
 function getData(citylocation, startpage, endpage) {
 	var url = 'http://www.foody.vn/' + citylocation +'/dia-diem?vt=row&st=1&append=true&provinceId=null&categoryId=null&page=' + startpage;
-	var filename = citylocation + '-' + startpage +'.json';
+	var filename = citylocation + '-' + startpage +'.txt';
 	$.get(url, function(data) {
 		if (startpage == endpage + 1) exit();
 		if (startpage > data.totalResult/12 + 2) exit();
