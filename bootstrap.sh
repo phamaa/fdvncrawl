@@ -4,6 +4,8 @@ do
 	sed -i 's/\\\\n//g' $f
 	sed -i 's/\\\\t//g' $f
 	sed -i 's/\\\"/"/g' $f
+	sed -i 's/<span style=\"/<span style=\\"/g' $f
+	sed -i 's/;\">/;\\">/g' $f
 	sed -i 's/\\\\\"/\\"/g' $f
 	sed -i 's/,,/,/g' $f
 	sed -i 's/,{}]/]/g' $f
