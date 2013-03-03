@@ -1,7 +1,7 @@
 datadir=data
 ls *.txt|xargs -n20|awk ' {i++;system("mkdir dir"i);system("mv "$0" -t dir"i)}'q
 mkdir $datadir
-mv -r dir* $datadir/
+mv dir* $datadir/
 
 files=`ls $datadir`
 for file in $files; do
