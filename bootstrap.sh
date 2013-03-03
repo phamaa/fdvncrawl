@@ -1,5 +1,5 @@
 datadir=data
-ls *.txt|xargs -n100|awk ' {i++;system("mkdir dir"i);system("mv "$0" -t dir"i)}'q
+ls *.txt|xargs -n300|awk ' {i++;system("mkdir dir"i);system("mv "$0" -t dir"i)}'q
 mkdir $datadir
 mv dir* $datadir/
 
