@@ -5,6 +5,13 @@ function getData(citylocation, startpage, endpage) {
 		if (startpage == endpage + 1) exit();
 		if (startpage > data.totalResult/12 + 2) exit();
 
+		for (var instance in data.restaurants) {
+			delete data.restaurants[instance].Promotions;
+			delete data.restaurants[instance].IconUrl;
+			delete data.restaurants[instance].ReviewUrl;
+			delete data.restaurants[instance].UrlRewriteName;
+		}
+
 		$.post("http://crawl.ganday.com/index.php", { data: JSON.stringify(data.restaurants), filename: filename, city: citylocation});
 
 		getData(citylocation, startpage+1, endpage);

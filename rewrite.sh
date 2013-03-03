@@ -37,6 +37,9 @@ sed -i 's/,\\\"PictureCount\\\":/,"PictureCount":/g' output
 sed -i 's/,\\\"Status\\\":/,"Status":/g' output
 sed -i 's/,\\\"IsAd\\\":/,"IsAd":/g' output
 sed -i 's/,\\\"IconUrl\\\":/,"IconUrl":/g' output
+sed -i 's/\\\",\\\"ASCIIName\\\":/","ASCIIName":/g' output
+sed -i 's/,\\\"DetailUrl\\\":\\\"/,"DetailUrl":"/g' output
+
 
 # sed -i 's/\\\\r//g' output
 # sed -i 's/\\\\n//g' output
