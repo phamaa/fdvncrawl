@@ -12,8 +12,6 @@ for file in $files; do
 	./rewrite.sh
 	echo "writing $file done"
 	rm rewrite.sh
-	mv output.txt ../$file.json
-	cd ../
-	rm -rf $file
-	cd ../
+	mv output.txt $file.json
+	cd ../../
 done
